@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigres Santa Catarina - Sitio Oficial</title>
+    <!-- Incluye el framework Tailwind CSS para un diseño moderno y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados para la paleta de colores del equipo */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1f3c; /* Azul Oscuro */
+            color: #f0f0f0; /* Blanco claro */
+        }
+        .hero-section {
+            background-color: #1a3258; /* Azul Ligeramente más claro para el fondo del hero */
+        }
+        .text-tigres-yellow {
+            color: #ffcc00; /* Amarillo */
+        }
+        .section-item {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .section-item:hover {
+            background-color: #1a3258;
+        }
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .section-content.open {
+            max-height: 2000px; /* Suficientemente grande para contener el contenido */
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-[#0b1f3c] text-[#f0f0f0]">
+
+    <!-- Encabezado de la página - Responsivo y centrado -->
+    <header class="p-6 md:p-8 text-center bg-[#1a3258] shadow-lg rounded-b-3xl">
+        <div class="flex flex-col items-center justify-center">
+            <!--
+                COMENTARIO IMPORTANTE: Este es el logo de Tigres de Santa Catarina.
+            -->
+            <img src="https://i.imgur.com/ocobnA5.jpeg" alt="Logo de Tigres Santa Catarina" class="w-32 h-32 mb-4 rounded-full shadow-lg border-4 border-yellow-400">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-400">Tigres Santa Catarina</h1>
+            <p class="mt-2 text-lg sm:text-xl font-medium text-white">¡La casa del béisbol en Santa Catarina!</p>
+        </div>
+    </header>
+
+    <!-- Sección principal del contenido -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-7xl">
+
+        <!-- Sección de Inicio / Bienvenida -->
+        <section class="text-center my-12 p-8 bg-[#1a3258] rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-4 text-yellow-400">¡Bienvenidos a nuestra guarida!</h2>
+            <p class="text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+                Somos la academia de béisbol de Santa Catarina, comprometidos con el desarrollo de futuros talentos. 
+                Aquí formamos a nuestros atletas con disciplina, pasión y los valores del juego, 
+                desde las bases hasta los niveles más avanzados. ¡Únete a la familia Tigre!
+            </p>
+        </section>
+
+        <!-- Sección "Acerca de Nosotros" -->
+        <section class="my-12 p-8 bg-[#1a3258] rounded-2xl shadow-xl">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-center text-yellow-400">Nuestra Filosofía</h2>
+            <div class="flex flex-col lg:flex-row items-center lg:space-x-8">
+                <!--
+                    COMENTARIO IMPORTANTE: Reemplaza la URL de abajo con la URL de tu foto de equipo.
+                    Ejemplo: "https://ejemplo.com/equipo.jpg"
+                -->
+                <img src="https://i.imgur.com/SJkhNn0.png" alt="Foto del equipo Tigres de Santa Catarina" class="w-full lg:w-1/2 rounded-xl shadow-lg mb-6 lg:mb-0">
+                <div class="lg:w-1/2">
+                    <p class="text-base leading-relaxed mb-4">
+                        En Tigres de Santa Catarina, no solo enseñamos béisbol; construimos carácter. 
+                        Nuestro programa se enfoca en el crecimiento integral de cada jugador, 
+                        fomentando el trabajo en equipo, el respeto y la perseverancia. 
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        Creemos que el éxito se logra con disciplina y esfuerzo, dentro y fuera del campo.
+                        Nuestros entrenadores certificados están aquí para guiar a cada atleta a alcanzar su máximo potencial.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Categorías -->
+        <section class="my-12 p-8 bg-[#1a3258] rounded-2xl shadow-xl">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-center text-yellow-400">Nuestras Categorías</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+                <!-- Tarjeta de Categoría 1 -->
+                <div class="p-6 bg-[#0b1f3c] rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-400">Biberón (3-4 Años)</h3>
+                    <p class="text-sm">Juegos y diversión para aprender los fundamentos del béisbol de forma lúdica.</p>
+                </div>
+                <!-- Tarjeta de Categoría 2 -->
+                <div class="p-6 bg-[#0b1f3c] rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-400">Pre-Moyote (5-6 Años)</h3>
+                    <p class="text-sm">Enfoque en la coordinación y desarrollo de habilidades motrices y de equipo.</p>
+                </div>
+                <!-- Tarjeta de Categoría 3 -->
+                <div class="p-6 bg-[#0b1f3c] rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-400">Moyote (7-8 Años)</h3>
+                    <p class="text-sm">Introducción a las reglas del juego y desarrollo de habilidades específicas.</p>
+                </div>
+                <!-- Tarjeta de Categoría 4 -->
+                <div class="p-6 bg-[#0b1f3c] rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-400">Pewee (9-10 Años)</h3>
+                    <p class="text-sm">Entrenamiento avanzado en técnica y estrategias de juego.</p>
+                </div>
+                <!-- Tarjeta de Categoría 5 -->
+                <div class="p-6 bg-[#0b1f3c] rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-400">Pequeña (11-12 Años)</h3>
+                    <p class="text-sm">Perfeccionamiento de habilidades y preparación para la competencia de alto nivel.</p>
+                </div>
+                <!-- Puedes añadir más tarjetas si es necesario -->
+            </div>
+        </section>
+
+        <!-- Nueva sección para los esquemas de entrenamiento -->
+        <section class="my-12 p-8 bg-[#1a3258] rounded-2xl shadow-xl">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-center text-yellow-400">Esquema de Desarrollo y Entrenamiento</h2>
+            <img src="https://placehold.co/100x100/ffcc00/0b1f3c?text=PLAN" alt="Logo de Plan Progresivo" class="w-20 h-20 mx-auto mb-4 rounded-full shadow-lg border-2 border-yellow-400">
+            <p class="text-center mb-6">
+                Descubre nuestro plan de 40 semanas para el desarrollo integral de cada jugador.
+            </p>
+
+            <!-- Contenedor para los ítems del roadmap (acordeón) -->
+            <div class="space-y-4">
+
+                <!-- Roadmap para Biberón -->
+                <div class="p-4 bg-[#0b1f3c] rounded-xl shadow-lg section-item" onclick="toggleSection('biberon-roadmap')">
+                    <h3 class="text-xl font-semibold text-yellow-400 flex justify-between items-center">
+                        Biberón (3-4 Años)
+                        <span id="biberon-roadmap-arrow">▼</span>
+                    </h3>
+                    <div id="biberon-roadmap-content" class="section-content">
+                        <div class="p-4 rounded-lg bg-[#1a3258] mt-4">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Fase 1 (Semanas 1-15): Fundamentos y Diversión.</strong>
+                                    Enfoque en la coordinación, familiarización con el equipo y juegos básicos. Se busca que los niños se diviertan y amen el béisbol.
+                                </li>
+                                <li><strong>Fase 2 (Semanas 16-30): Movimiento y Habilidades.</strong>
+                                    Desarrollo de habilidades motrices como correr, lanzar y atrapar de forma simple.
+                                </li>
+                                <li><strong>Fase 3 (Semanas 31-40): Mini-Juegos y Amistad.</strong>
+                                    Introducción a mini-juegos para aprender a interactuar con sus compañeros. El objetivo es el juego en equipo.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roadmap para Pre-Moyote -->
+                <div class="p-4 bg-[#0b1f3c] rounded-xl shadow-lg section-item" onclick="toggleSection('pre-moyote-roadmap')">
+                    <h3 class="text-xl font-semibold text-yellow-400 flex justify-between items-center">
+                        Pre-Moyote (5-6 Años)
+                        <span id="pre-moyote-roadmap-arrow">▼</span>
+                    </h3>
+                    <div id="pre-moyote-roadmap-content" class="section-content">
+                        <div class="p-4 rounded-lg bg-[#1a3258] mt-4">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Fase 1 (Semanas 1-15): Control Básico.</strong>
+                                    Perfeccionamiento de la mecánica de bateo y lanzamiento. Introducción a los conceptos de posición en el campo.
+                                </li>
+                                <li><strong>Fase 2 (Semanas 16-30): Coordinación Avanzada.</strong>
+                                    Ejercicios para mejorar la coordinación ojo-mano y el trabajo en equipo en situaciones de juego simuladas.
+                                </li>
+                                <li><strong>Fase 3 (Semanas 31-40): Juegos de Campo.</strong>
+                                    Participación en juegos completos con reglas básicas. Enfocados en entender el flujo del partido.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Roadmap para Moyote -->
+                <div class="p-4 bg-[#0b1f3c] rounded-xl shadow-lg section-item" onclick="toggleSection('moyote-roadmap')">
+                    <h3 class="text-xl font-semibold text-yellow-400 flex justify-between items-center">
+                        Moyote (7-8 Años)
+                        <span id="moyote-roadmap-arrow">▼</span>
+                    </h3>
+                    <div id="moyote-roadmap-content" class="section-content">
+                        <div class="p-4 rounded-lg bg-[#1a3258] mt-4">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Fase 1 (Semanas 1-15): Fundamentos Técnicos.</strong>
+                                    Enfoque en la técnica de bateo, defensa y lanzamiento. Introducción al entrenamiento de pítchers y receptores.
+                                </li>
+                                <li><strong>Fase 2 (Semanas 16-30): Tácticas y Posiciones.</strong>
+                                    Desarrollo de la comprensión de las tácticas del juego. Asignación y entrenamiento en posiciones específicas.
+                                </li>
+                                <li><strong>Fase 3 (Semanas 31-40): Competición y Estrategia.</strong>
+                                    Participación en torneos locales. Se enfatiza la toma de decisiones rápidas y el trabajo en equipo bajo presión.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roadmap para Pewee -->
+                <div class="p-4 bg-[#0b1f3c] rounded-xl shadow-lg section-item" onclick="toggleSection('pewee-roadmap')">
+                    <h3 class="text-xl font-semibold text-yellow-400 flex justify-between items-center">
+                        Pewee (9-10 Años)
+                        <span id="pewee-roadmap-arrow">▼</span>
+                    </h3>
+                    <div id="pewee-roadmap-content" class="section-content">
+                        <div class="p-4 rounded-lg bg-[#1a3258] mt-4">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Fase 1 (Semanas 1-15): Perfeccionamiento de Habilidades.</strong>
+                                    Refinamiento de las técnicas de lanzamiento, bateo y fildeo. Entrenamiento físico adaptado a la edad.
+                                </li>
+                                <li><strong>Fase 2 (Semanas 16-30): Juego Estratégico.</strong>
+                                    Análisis de jugadas y desarrollo de estrategias ofensivas y defensivas. Manejo de situaciones de juego complejas.
+                                </li>
+                                <li><strong>Fase 3 (Semanas 31-40): Preparación para Torneos.</strong>
+                                    Entrenamiento intensivo enfocado en la preparación para la competencia a nivel regional y nacional.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roadmap para Pequeña -->
+                <div class="p-4 bg-[#0b1f3c] rounded-xl shadow-lg section-item" onclick="toggleSection('pequena-roadmap')">
+                    <h3 class="text-xl font-semibold text-yellow-400 flex justify-between items-center">
+                        Pequeña (11-12 Años)
+                        <span id="pequena-roadmap-arrow">▼</span>
+                    </h3>
+                    <div id="pequena-roadmap-content" class="section-content">
+                        <div class="p-4 rounded-lg bg-[#1a3258] mt-4">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Fase 1 (Semanas 1-15): Liderazgo y Especialización.</strong>
+                                    Entrenamiento de alto rendimiento para fortalecer habilidades físicas y mentales. Énfasis en el liderazgo en el campo.
+                                </li>
+                                <li><strong>Fase 2 (Semanas 16-30): Rendimiento de Élite.</strong>
+                                    Técnicas avanzadas de bateo, pitcheo y defensa. Comprensión profunda de las reglas y la estrategia del juego.
+                                </li>
+                                <li><strong>Fase 3 (Semanas 31-40): Visibilidad y Competencia.</strong>
+                                    Preparación para la competencia a nivel de selecciones estatales y nacionales.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Nueva sección para entrenadores -->
+        <section class="text-center my-12 p-8 bg-[#1a3258] rounded-2xl shadow-xl">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-yellow-400">Para Entrenadores</h2>
+            <p class="text-base sm:text-lg mb-6">
+                Accede a recursos, manuales y herramientas exclusivas para nuestro cuerpo técnico.
+            </p>
+            <!--
+                COMENTARIO IMPORTANTE: Se ha añadido target="_blank" y rel="noopener noreferrer"
+                para que el enlace se abra en una nueva pestaña y funcione correctamente en todos los navegadores.
+            -->
+            <a href="https://tigres-de-santa-catarina.github.io/Plan-de-entrenamiento-Tigres/" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#0b1f3c] hover:bg-yellow-400 text-white hover:text-[#0b1f3c] font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Acceder al Portal
+            </a>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section class="text-center my-12 p-8 bg-[#1a3258] rounded-2xl shadow-xl">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-yellow-400">Contáctanos</h2>
+            <p class="text-base sm:text-lg mb-4">Estamos aquí para responder tus preguntas. ¡Ponte en contacto con nosotros!</p>
+            <div class="flex flex-col items-center space-y-4">
+                <!-- Se ha añadido un enlace a Facebook con un icono SVG para que se vea bien en todas las pantallas. -->
+                <a href="https://www.facebook.com/share/17H4tUEh9u/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="flex items-center text-white hover:text-yellow-400 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 5.016 3.655 9.183 8.439 9.948v-7.058H7.902V12h2.537V9.782c0-2.502 1.492-3.88 3.774-3.88 1.074 0 2.001.08 2.274.116v2.541h-1.503c-1.246 0-1.488.59-1.488 1.458V12h2.822l-.454 2.89H12.924v7.058C17.709 21.183 21.364 17.016 21.364 12c0-5.523-4.477-10-10-10z"/>
+                    </svg>
+                    <span>Visita nuestro Facebook</span>
+                </a>
+                <p><strong>Dirección:</strong> 3a. Avenida 1202, Privada Encinos, Zimix, 66358 Cdad. Santa Catarina, N.L.</p>
+                <!--
+                    COMENTARIO IMPORTANTE: Este es el mapa de Google Maps para la dirección especificada.
+                    Se ha añadido con un iframe para una visualización interactiva.
+                -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.536787680786!2d-100.4727506!3d25.6457314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x867375a5961b7f9d%3A0x6a2c270e5a8f4b0!2s3a.%20Avenida%201202%2C%20Privada%20Encinos%2C%20Zimix%2C%2066358%20Cdad.%20Santa%20Catarina%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1700201234567!5m2!1ses-419!2smx" 
+                    width="100%" 
+                    height="320" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded-xl shadow-lg mt-4"
+                    title="Ubicación de Tigres Santa Catarina en Google Maps">
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="text-center p-6 md:p-8 bg-[#0b1f3c] text-white">
+        <p class="text-sm">&copy; 2025 Tigres Santa Catarina. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para la funcionalidad del acordeón -->
+    <script>
+        function toggleSection(id) {
+            const content = document.getElementById(id + '-content');
+            const arrow = document.getElementById(id + '-arrow');
+            content.classList.toggle('open');
+            if (content.classList.contains('open')) {
+                arrow.textContent = '▲';
+            } else {
+                arrow.textContent = '▼';
+            }
+        }
+    </script>
+
+</body>
+</html>
